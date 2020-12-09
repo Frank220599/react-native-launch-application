@@ -41,7 +41,7 @@ public class SajjadLaunchApplicationModule extends ReactContextBaseJavaModule {
   //  Intent dialogIntent = new Intent(getReactApplicationContext(), MainActivity.class);
     Intent dialogIntent = getReactApplicationContext().getPackageManager().getLaunchIntentForPackage(PackageName);
 
-    dialogIntent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+    dialogIntent.addFlags(Intent.FLAG_ACTIVITY_REORDER_TO_FRONT);
     dialogIntent.addFlags(WindowManager.LayoutParams.FLAG_SHOW_WHEN_LOCKED +
             WindowManager.LayoutParams.FLAG_DISMISS_KEYGUARD +
             //      WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON +
